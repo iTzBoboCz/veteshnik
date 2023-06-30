@@ -36,7 +36,7 @@ struct ContactInfo {
 
 #[derive(Debug)]
 enum BidStatus {
-  CurrentBidOnly((Price, Option<ContactInfo>)),
+  CurrentBidOnly(Price, Option<ContactInfo>),
   StartEndBids {
     starting_bid: (Price, Option<ContactInfo>),
     current_highest_bid: (Price, Option<ContactInfo>),
@@ -55,7 +55,7 @@ struct SaleListing {
 enum ListingType {
   Sale(SaleListing),
   Auction {
-    end_time: OffsetDateTime,
+    end_datetime: OffsetDateTime,
     bid_status: Option<BidStatus>,
   },
 }
