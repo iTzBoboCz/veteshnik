@@ -56,7 +56,7 @@ enum ListingType {
   Sale(SaleListing),
   Auction {
     end_time: OffsetDateTime,
-    bid_status: BidStatus,
+    bid_status: Option<BidStatus>,
   },
 }
 
